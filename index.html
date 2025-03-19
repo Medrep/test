@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GrapeJS Page</title>
+    <title>GrapeJS Web Builder</title>
+    <script src="https://unpkg.com/grapesjs"></script>
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
     <style>
-        .my-heading { font-size: 24px; color: blue; }
-        .my-button { background: red; color: white; padding: 10px; }
+        body, html { margin: 0; padding: 0; }
+        #gjs { height: 100vh; }
     </style>
 </head>
 <body>
-    <h1 class="my-heading">Welcome to GrapeJS</h1>
-    <button class="my-button">Click Me</button>
+    <div id="gjs">
+        <h1>Welcome to GrapeJS</h1>
+        <button>Click Me</button>
+    </div>
+    <script>
+        const editor = grapesjs.init({
+            container: '#gjs',
+            height: '100vh',
+            fromElement: true,
+        });
+    </script>
 </body>
 </html>
